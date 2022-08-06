@@ -9,6 +9,11 @@ def index():
         "name": 'Lisa',
         "song": 'LALISA'
     }
+    songs = [
+        "New Rules",
+        "Fever",
+        "How You Like That"
+    ]
     return render_template(
-        "index.html", **kwargs
+        "index.html", **kwargs, songs=songs
     )

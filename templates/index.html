@@ -9,6 +9,12 @@
 </head>
 
 <body>
+    {% set num_todos = todos | length %}
+    {% if num_todos > 0 %}
+    <p>You have {{num_todos}} todos</p>
+    {% else %}
+    <p>You have 0 todos</p>
+    {% endif %}
     <h1>Index</h1>
     <p>This is the index page, {{name}} sings {{song}}</p>
     <p>{{songs[1]}} {{songs[0]}}</p>

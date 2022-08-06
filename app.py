@@ -27,8 +27,9 @@ def create_app():
             "linna": "chrome"
         }
         company = "Apple"
+        todos = ["workout", "coding"]
         return render_template(
-            "index.html", **kwargs, songs=songs, company=company, laptop_users=laptop_users
+            "index.html", **kwargs, songs=songs, company=company, laptop_users=laptop_users, todos=todos
         )
 
     @app.route('/', methods=["GET", "POST"])

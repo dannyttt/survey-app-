@@ -14,6 +14,7 @@ def index():
         "Fever",
         "How You Like That"
     ]
+    company = "Apple"
     return render_template(
-        "index.html", **kwargs, songs=songs
+        "index.html", **kwargs, songs=songs, company=company
     )

@@ -12,6 +12,14 @@
     <h1>Index</h1>
     <p>This is the index page, {{name}} sings {{song}}</p>
     <p>{{songs[1]}} {{songs[0]}}</p>
+
+    {% if company == "Apple" %}
+    <p>Macbook Pro</p>
+    {% elif company == "Microsoft" %}
+    <p>Surface Pro</p>
+    {% else %}
+    <p>Chrome book </p>
+    {% endif %}
 </body>
 
 </html>

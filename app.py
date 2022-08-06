@@ -1,7 +1,11 @@
 from flask import Flask, render_template, request
+from pymongo import MongoClient
 import datetime
-app = Flask(__name__)
 
+app = Flask(__name__)
+client = MongoClient(
+    "mongodb://localhost:27017/?readPreference=primary&appname=MongoDB%20Compass&directConnection=true&ssl=false")
+app.db = client.microblog
 entries = []
 
 
@@ -29,11 +33,13 @@ def practice():
 
 @app.route('/', methods=["GET", "POST"])
 def home():
+    # print([e for e in app.db.entires.find({})])
     if request.method == "POST":
         entry_content = request.form.get("content")
         formatted_date = datetime.datetime.today().strftime("%Y-%m-%d %H:%M:%S")
         entries.append((entry_content, formatted_date))
-
+        app.db.entries.insert_one(
+            {"content": entry_content, "date": formatted_date})
     entires_with_date = [
         (
             entry[0],

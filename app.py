@@ -14,7 +14,12 @@ def index():
         "Fever",
         "How You Like That"
     ]
+    laptop_users = {
+        "kai": "mac",
+        "lisa": "windows",
+        "linna": "chrome"
+    }
     company = "Apple"
     return render_template(
-        "index.html", **kwargs, songs=songs, company=company
+        "index.html", **kwargs, songs=songs, company=company, laptop_users=laptop_users
     )

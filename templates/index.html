@@ -20,6 +20,24 @@
     {% else %}
     <p>Chrome book </p>
     {% endif %}
+
+    <ul>
+        {% for song in songs %}
+        <p>{{song}}</p>
+        {% endfor %}
+    </ul>
+
+    <ul>
+        {% for user, os in laptop_users.items() %}
+        {% if os == 'mac' %}
+        <p>{{user}} is {{os}} user</p>
+        {% elif os == 'windows' %}
+        <p>{{user}} is {{os}} user</p>
+        {% else %}
+        <p>{{user}} is {{os}} user</p>
+        {% endif %}
+        {% endfor %}
+    </ul>
 </body>
 
 </html>

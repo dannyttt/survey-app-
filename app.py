@@ -27,7 +27,10 @@ def create_app():
             "linna": "chrome"
         }
         company = "Apple"
-        todos = ["workout", "coding"]
+        todos = [
+            ("work out", False),
+            ("Coding", True)
+        ]
         return render_template(
             "index.html", **kwargs, songs=songs, company=company, laptop_users=laptop_users, todos=todos
         )

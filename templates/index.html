@@ -1,3 +1,4 @@
+{% from "macros.jinja2" import todo_list %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,6 +13,7 @@
     {% set num_todos = todos | length %}
     {% if num_todos > 0 %}
     <p>You have {{num_todos}} todos</p>
+    {{todo_list(todos)}}
     {% else %}
     <p>You have 0 todos</p>
     {% endif %}

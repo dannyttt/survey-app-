@@ -5,19 +5,7 @@
 {% endblock %}
 
 {% block content %}
-<header class="navbar">
-  <div class="navbar__brand">
-    <img class="navbar__logo" src="../static/logo.svg" alt="The Microblog logo" />Microblog
-  </div>
-  <ul class="navbar__navigation">
-    <li class="navbar__navigation-item">
-      <a href="#" class="navbar__link">Recent</a>
-    </li>
-    <li class="navbar__navigation-item">
-      <a href="#" class="navbar__link">Calendar</a>
-    </li>
-  </ul>
-</header>
+{% include 'header.html' %}
 <main class="main">
   <section>
     <h1>Add new entry</h1>
@@ -44,22 +32,5 @@
     {% endfor %}
   </section>
 </main>
-<footer class="footer">
-  <div class="footer__content">
-    <section class="left">
-      <a class="footer__item">Made by Jose Salvatierra</a>
-      <a class="footer__item">Check out my other projects</a>
-    </section>
-    <section class="right">
-      <div class="footer__column">
-        <a class="footer__item">Recent</a>
-        <a class="footer__item">Calendar</a>
-      </div>
-      <div class="footer__column">
-        <a class="footer__item" href="#">About</a>
-        <a class="footer__item">How this was made</a>
-      </div>
-    </section>
-  </div>
-</footer>
+{% include 'footer.html' %}
 {% endblock %}

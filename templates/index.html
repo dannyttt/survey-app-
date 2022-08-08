@@ -1,4 +1,3 @@
-{% from "macros.jinja2" import todo_list %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,46 +5,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Index</title>
+    <title>Home</title>
 </head>
 
 <body>
-    {% set num_todos = todos | length %}
-    {% if num_todos > 0 %}
-    <p>You have {{num_todos}} todos</p>
-    {{todo_list(todos)}}
-    {% else %}
-    <p>You have 0 todos</p>
-    {% endif %}
-    <h1>Index</h1>
-    <p>This is the index page, {{name}} sings {{song}}</p>
-    <p>{{songs[1]}} {{songs[0]}}</p>
-
-    {% if company == "Apple" %}
-    <p>Macbook Pro</p>
-    {% elif company == "Microsoft" %}
-    <p>Surface Pro</p>
-    {% else %}
-    <p>Chrome book </p>
-    {% endif %}
-
-    <ul>
-        {% for song in songs %}
-        <p>{{song}}</p>
-        {% endfor %}
-    </ul>
-
-    <ul>
-        {% for user, os in laptop_users.items() %}
-        {% if os == 'mac' %}
-        <p>{{user}} is {{os}} user</p>
-        {% elif os == 'windows' %}
-        <p>{{user}} is {{os}} user</p>
-        {% else %}
-        <p>{{user}} is {{os}} user</p>
-        {% endif %}
-        {% endfor %}
-    </ul>
+    <h1>Index Page</h1>
 </body>
 
 </html>
